@@ -1,0 +1,18 @@
+<div class="content">
+    <div class="text">
+        <h1>Buscar Cep</h1>
+        <img src="../../../assets/icons8-pesquisar-96.svg" alt="">
+    </div>
+    <form class="form" (ngSubmit)="onSubmit()">
+        <mat-form-field  >
+          <mat-label >Digite seu Cep</mat-label>
+          <input matInput placeholder="Ex. 01001-000 " [(ngModel)]="cep" name="cep" required 
+          >
+        </mat-form-field>
+        <button mat-raised-button color="primary">Buscar</button>
+      </form>
+      
+      <div class="result">
+        <h3></h3>
+      </div>
+</div>

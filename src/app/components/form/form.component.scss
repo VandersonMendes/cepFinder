@@ -1,0 +1,30 @@
+.content{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 40vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+form{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.form {
+    min-width: 100px;
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+.text{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
