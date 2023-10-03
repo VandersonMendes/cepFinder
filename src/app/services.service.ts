@@ -9,7 +9,7 @@ export class ServicesService {
   
   constructor(private http :HttpClient) { }
 
-  getAll(cep: string | number): Observable <Cep[]>{
-    return this.http.get<Cep[]>(`https://viacep.com.br/ws/${cep}/json/`)
+  getAll(cep: string | number): Observable <Cep>{
+    return this.http.get<Cep>(`https://viacep.com.br/ws/${cep}/json/`)
   }
 }
