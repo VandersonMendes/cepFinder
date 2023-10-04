@@ -34,8 +34,21 @@ form{
   font-weight: 600;
   font-size: 18px;
 }
-.result{
+.result, .resultError{
+  min-width: 100px;
+  max-width: 280px;
+  width: 100%;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.226);
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgb(210, 198, 30);
+  width: 100%;
+}
+.resultError{
+  color: red;
+  background-color: rgb(240, 240, 240);
 }
