@@ -34,3 +34,8 @@ form{
   font-weight: 600;
   font-size: 18px;
 }
+.result{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}

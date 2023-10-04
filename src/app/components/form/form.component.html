@@ -1,7 +1,7 @@
 <div class="content">
     <div class="text">
         <h1>Buscar Cep</h1>
-        <img src="../../../assets/icons8-pesquisar-96.svg" alt="ilupa de pesquisa">
+        <img src="../../../assets/icons8-pesquisar-96.svg" alt="lupa de pesquisa">
     </div>
     <form class="form" (ngSubmit)="onSubmit()">
         <mat-form-field  >
@@ -14,10 +14,11 @@
         <h2>{{error}}</h2>
       </div>
 
-      <div class="result?" *ngIf="result && result ; else elseBlock">
+      <div class="result" *ngIf="result && cep !== '' ; else elseBlock">
         <h3>Cep: {{ result?.cep }}</h3>
+        <h3>Cep: {{ result?.bairro }}</h3>
         <h3>DDD: {{ result?.ddd }}</h3>
-        <!-- <h3>{{ result.algumaOutraPropriedade }}</h3> -->
+        <h3>Localidade: {{ result.localidade }}</h3>
       </div>
       
       <ng-template #elseBlock>

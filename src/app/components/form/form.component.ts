@@ -7,8 +7,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { ServicesService } from 'src/app/services.service';
 import { Cep } from 'src/app/cep';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-form',
@@ -21,7 +21,9 @@ import { Observable } from 'rxjs';
     MatInputModule,
     MatButtonModule,
     MatTooltipModule,
-    MatIconModule,
+    MatIconModule,  
+    CommonModule,
+    
   ],
 })
 export class FormComponent {
@@ -30,7 +32,6 @@ export class FormComponent {
   cep: string = '';
   error: string = '';
   result: Cep | null = null;
-
   onSubmit(): void {
     const cepPattern = /^[0-9]{8}$/;
     const validPattern = cepPattern.test(this.cep);
@@ -51,7 +52,7 @@ export class FormComponent {
   }
 
   onChange(): void {
-    const regex = /^[0-9]+$/;
+    const regex = /^[0-9]+(-[0-9]+)?$/;
     const cep = this.cep;
     if (!cep) {
       this.error = '';
