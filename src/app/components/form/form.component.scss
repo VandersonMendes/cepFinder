@@ -47,8 +47,24 @@ form{
   border-radius: 10px;
   background-color: rgb(210, 198, 30);
   width: 100%;
+  opacity: 0; /* Começa invisível */
+  transform: translateY(70px); /* Começa ligeiramente abaixo */
+  animation: animeBottom 1s forwards; /* Ativa a animação 'entrada' por 1 segundo */
+}
+@keyframes animeBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(70px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 .resultError{
   color: red;
   background-color: rgb(240, 240, 240);
+}
+.animationTop{
+  animation: animationTop;
 }
