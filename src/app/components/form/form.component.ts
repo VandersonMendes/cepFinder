@@ -37,6 +37,7 @@ export class FormComponent {
     const validPattern = cepPattern.test(this.cep);
     if (this.cep && validPattern === false) {
       this.error = 'Digite seu cep corretamente';
+      this.result = null
     } else {
       this.services.getAll(this.cep).subscribe(
         (cepData: Cep) => { 
@@ -58,12 +59,16 @@ export class FormComponent {
       this.error = '';
     } else if (!regex.test(cep)) {
       this.error = 'Digite apenas números';
+      this.result = null
     } else if (cep.length > 8) {
       this.error = 'O CEP deve conter exatamente 8 dígitos';
+      this.result = null;
     } else if (this.cep === '') {
+      this.result = null;
       this.error = '';
     } else {
       this.error = '';
+      this.result = null
     }
   }
 }
